@@ -16,7 +16,7 @@ folder=~/github/dataset-elecciones-28a/csv/autonomias/
 for (( i=0; i<${#autonomia[@]}; ++i )); do
 
     # Buscamos en la columna autonomia y generamos un CSV por cada una de las autonomias
-    csvgrep -c ccaa -r "${autonomia[$i]}$" elecciones-generales-2019.csv > "$folder""${autonomia[$i]}".csv
+    csvgrep -c ccaa -r "${autonomia[$i]}" elecciones-generales-2019.csv > "$folder""${autonomia[$i]}".csv
 
     echo "${autonomia[$i]} terminada!"
 done
